@@ -19,10 +19,10 @@ export class MainComponent implements OnInit {
 
   constructor(@Inject(MAIN_VIEW_HELPER_SERVICE) vh: IMainViewHelperService){
     this.vh = vh;
-    console.log(vh);
   }
 
   ngOnInit(): void {
+    console.log(this.vh);
     this.name$.next(this.vh.getName());
   }
 }

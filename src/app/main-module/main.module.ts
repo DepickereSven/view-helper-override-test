@@ -17,7 +17,7 @@ export class MainModule {
       providers: [
         {
           provide: MAIN_VIEW_HELPER_SERVICE,
-          useClass: config && config.service || MainViewHelper
+          useClass: config && config.service
         }
       ]
     }
