@@ -4,13 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MainModule } from './main/main.module';
-import { OverridableViewHelper } from './overridable-view.helper';
 
 @NgModule({
   imports:      [ 
     BrowserModule,
      FormsModule,
-      MainModule.forRoot({ service: {defaultViewHelper: OverridableViewHelper} })
+      MainModule.forRoot()
        ],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ]
