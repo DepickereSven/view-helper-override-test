@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './view/app.component';
-import { MainModule } from './main/main.module';
+import { MainModule } from './main-module/main.module';
 import { MainViewCustomHelper } from "./view-helpers/main-view-custom.helper";
 
 @NgModule({

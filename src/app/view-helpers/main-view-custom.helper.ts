@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IMainViewHelperService } from "../main/view-helpers/I-Main-View-Helper.service";
+import { IMainViewHelperService } from "../main-module/view-helpers/I-Main-View-Helper.service";
 
 @Injectable()
 export class MainViewCustomHelper implements IMainViewHelperService{
