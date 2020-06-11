@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { IViewHelperService, VIEW_HELPER_SERVICE } from './I-view-helper.service';
+import { IMainViewHelperService, MAIN_VIEW_HELPER_SERVICE } from '../view-helpers/IMainViewHelperService';
 
 @Component({
   selector: 'main',
@@ -17,7 +17,7 @@ export class MainComponent implements OnInit {
   
   vh: any;
 
-  constructor(@Inject(VIEW_HELPER_SERVICE) vh: IViewHelperService){
+  constructor(@Inject(MAIN_VIEW_HELPER_SERVICE) vh: IMainViewHelperService){
     this.vh = vh;
     console.log(vh);
   }

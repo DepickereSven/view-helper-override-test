@@ -1,8 +1,8 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MainComponent } from './main.component';
-import { HelloComponent } from './hello.component';
-import { IViewHelperService, VIEW_HELPER_SERVICE, ViewHelpersConfig } from './I-view-helper.service';
+import { MainComponent } from './view/main.component';
+import { HelloComponent } from './view/hello.component';
+import { IMainViewHelperService, MAIN_VIEW_HELPER_SERVICE, MainViewHelpersConfig } from './view-helpers/IMainViewHelperService';
 
 @NgModule({
   imports: [BrowserModule],
@@ -10,13 +10,13 @@ import { IViewHelperService, VIEW_HELPER_SERVICE, ViewHelpersConfig } from './I-
   exports: [MainComponent]
 })
 export class MainModule {
-  static forRoot(config?: ViewHelpersConfig): ModuleWithProviders {
+  static forRoot(config?: MainViewHelpersConfig): ModuleWithProviders {
     return {
       ngModule: MainModule,
       providers: [
         {
-          provide: VIEW_HELPER_SERVICE,
-          useClass: config && config.viewHelpers
+          provide: MAIN_VIEW_HELPER_SERVICE,
+          useClass: config && config.service
         }
       ]
     }

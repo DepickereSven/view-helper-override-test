@@ -10,7 +10,7 @@ import { OverridableViewHelper } from './overridable-view.helper';
   imports:      [ 
     BrowserModule,
      FormsModule,
-      MainModule.forRoot({ viewHelpers: {defaultViewHelper: OverridableViewHelper} })
+      MainModule.forRoot({ service: {defaultViewHelper: OverridableViewHelper} })
        ],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ]
